@@ -1,5 +1,6 @@
+from atexit import register
 from django.contrib import admin
-from blogs.models import Category,Blog
+from blogs.models import  Category,Blog
 
 class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = { 'slug':('title',) }
